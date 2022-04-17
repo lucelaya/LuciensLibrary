@@ -1,0 +1,100 @@
+/*Inicializacion para normalizacion del navegador*/
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+}
+Header{
+    background: url("../img/lucien_header.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+}
+.cards-mine{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+.card-mine{
+    width:100%;
+    height: 300px;
+}
+.fade-mine{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* para tablet|desktop - mediaquery
+    flex-direction: row;
+    justify-content: space-around; */
+    text-transform: uppercase;
+    line-height: 40px;
+}
+.fade-mine__content{
+    display: block;
+    opacity: 0;
+    animation: revealText 1s forwards;
+}
+.fade-mine-second{animation-delay: .33s;}
+.fade-mine-third{animation-delay: .66s;}
+@keyframes revealText {
+    from{
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.footer__link-mine{
+    display: inline-block;
+    margin-block: 2px;
+    text-decoration: none;
+    color: grey;
+    position: relative;
+    text-align: center;
+}
+.footer__link-mine::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+.footer__link-mine:hover::after{
+    transform: scale(1);
+}
+
+@media (min-width:640px) {
+    .fade-mine{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #carouselExampleIndicators{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .itemDesc-mine{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
+
+@media (min-width:1200px) {
+    #carouselExampleIndicators{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    .itemDesc-mine{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+}
