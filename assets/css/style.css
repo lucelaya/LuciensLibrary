@@ -14,7 +14,7 @@ Header{
 }
 .cards-mine{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 .card-mine{
@@ -108,10 +108,6 @@ Header{
 }
 
 @media (min-width:640px) {
-    .fade-mine{
-        flex-direction: row;
-        justify-content: space-around;
-    }
     #carouselExampleIndicators{
         margin-left: 150px;
         margin-right: 150px;
@@ -121,7 +117,15 @@ Header{
         margin-right: 150px;
     }
 }
-
+@media (min-width:768px) {
+    .fade-mine{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .cards-mine{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+}
 @media (min-width:1200px) {
     #carouselExampleIndicators{
         margin-left: 250px;
