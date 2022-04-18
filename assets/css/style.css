@@ -107,7 +107,7 @@ Header{
     transform: scale(1);
 }
 
-@media (min-width:640px) {
+/* @media (min-width:640px) {
     #carouselExampleIndicators{
         margin-left: 150px;
         margin-right: 150px;
@@ -116,7 +116,7 @@ Header{
         margin-left: 150px;
         margin-right: 150px;
     }
-}
+} */
 @media (min-width:768px) {
     .fade-mine{
         flex-direction: row;
@@ -124,6 +124,15 @@ Header{
     }
     .cards-mine{
         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+
+    #carouselExampleIndicators{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .itemDesc-mine{
+        margin-left: 150px;
+        margin-right: 150px;
     }
 }
 @media (min-width:1200px) {
