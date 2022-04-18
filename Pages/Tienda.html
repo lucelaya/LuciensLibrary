@@ -1,59 +1,111 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Mis estilos -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Lucien's Library-Tienda</title>
 </head>
-<body>
+
+<body class="d-flex flex-column h-100 bg-light">
     <header>
-        <h1><a href="../index.html">Lucien's Library</a></h1>
-        <nav class="navegador">
-            <ul>
-                <li><a class= "link" href="Series.html">Series</a></li>
-                <li><a class= "link" href="Guionistas.html">Guionistas</a></li>
-                <li><a class= "link" href="Dibujantes.html">Dibujantes</a></li>
-                <li><a class= "link" href="Tienda.html">Tienda</a></li>
-            </ul>
+        <!-- <h1><a class="nav-link active" href="./index.html">Lucien's Library</a></h1> -->
+        <!-- nav -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Lucien's Library</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="Series.html">Series</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Guionistas.html">Guionistas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Dibujantes.html">Dibujantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Tienda.html">Tienda</a></li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search-ComingSoon..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
         </nav>
+        <!-- /nav -->
     </header>
-    <main class="main">
-        <h2>Tienda</h2>
-        <p>Existen distintas ediciones sobre los titulos, contactenos, y se le brindaran opciones de compra.</p>
-        <p>Deje sus datos y sera contactado</p>
-        <!--Contacto-->
-        <form>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" class="field" placeholder="Escriba su Nombre">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" class="field" placeholder="Escriba su Apellido">
-            <label for="sobrenombre">Mail</label>
-            <input type="email" id="sobrenombre" class="field" placeholder="Escriba su Mail">
-            <label for="comment">Comentario</label>
-            <textarea name="textarea" rows="10" cols="50" class="field" placeholder="Puede dejar un comentario aqui"></textarea>
-            <label for="send"></label>
-            <label for="newsletter" class="check-label">
-                <input type="checkbox" id="field newsletter" class="check">Desea recibir el newsletter?
-            </label>
-            <p class="center-content">
-                <input class="button" type="submit" value="Enviar">
-                <input class="button" type="reset" value="Borrar">
-            </p>
+
+    <!-- main -->
+    <main class="container">
+        <h1 class="mt-3 text-center">Tienda</h1>
+        <p class="lead">Existen distintas ediciones sobre los titulos, contactenos, y se le brindaran opciones de compra.</p>
+        <!-- Formulario de contacto -->
+        <h2 class="mb-3 h5">Formulario de contacto</h2>
+        <form class="row g-3 form-mine mb-2">
+            <div class="col-md-6">
+                <label for="inputName" class="form-label">Nombre</label>
+              <input type="text" class="form-control field-mine" id="inputName" placeholder="Escriba su Nombre" aria-label="Nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="inputLastName" class="form-label">Apellido</label>
+              <input type="text" class="form-control field-mine" id="inputLastName" placeholder="Escriba su Apellido" aria-label="Apellido">
+            </div>
+            <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">E-mail</label>
+                <input type="email" class="form-control field-mine" id="inputEmail4" placeholder="Escriba su E-Mail" aria-label="E-Mail">
+            </div>
+            <div class="col-12">
+                <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
+                <textarea class="form-control" placeholder="Puede dejar un comentario aqui" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" aria-label="checkNewsletter">
+                  <label class="form-check-label" for="gridCheck">
+                    Desea recibir el newsletter?
+                  </label>
+                </div>
+            </div>
+            <div class="d-grid gap-2 center-content mb-2">
+                <button type="submit" class="btn btn-primary button-mine">Enviar</button>
+                <button type="reset" class="btn btn-secondary button-mine">Borrar</button>
+            </div>
         </form>
+
+
+        <!-- /Formulario de contacto -->
     </main>
-    <footer>
-        <ul class="footer">
-            <li><a class="footer__link" href="Tienda.html">Tienda</a></li>
-            <li><a class="footer__link" href="https://www.instagram.com" target="_blank">Redes Sociales</a></li>
-            <li><a class="footer__link" href="https://github.com/lucelaya" target="_blank">Copyright</a></li>
-        </ul>
+    <!-- /main -->
+
+    <!-- footer -->
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container">
+            <span class="d-flex justify-content-end">
+                <span><a class="text-muted text-decoration-none lh-1 footer__link-mine mx-3"
+                        href="Tienda.html">Tienda</a></span>
+                <span><a class="text-muted text-decoration-none lh-1 footer__link-mine mx-3" href="https://www.instagram.com"
+                        target="_blank">Redes Sociales</a></span>
+                <span><a class="text-muted text-decoration-none lh-1 footer__link-mine"
+                        href="https://github.com/lucelaya" target="_blank">Lucelaya</a></span>
+                <span class="text-muted ">&copy; 2022 All rights reserved.</span>
+            </span>
+        </div>
     </footer>
+    <!-- /footer -->
+
     <!-- JS - Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>

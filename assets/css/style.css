@@ -3,84 +3,41 @@
     padding: 0;
     margin: 0;
 }
-/*Importar Fuentes desde google font*/
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto+Serif:ital,wght@0,100;1,100&family=Roboto:ital,wght@0,100;1,100&display=swap');
-/* font-family: 'Luckiest Guy', cursive; */
-
-body {
-    display:grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 200px 2fr auto;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";
+body{
     min-height: 100vh;
 }
-
-header{
-    grid-area: header;
+Header{
     background: url("../img/lucien_header.png");
     background-size: cover;
     background-position: center;
+    min-height: 200px;
 }
-a{
-    color: white;
-    text-decoration: none;
-}
-li{
-    list-style: none;
-    text-align: center;
-}
-.link:hover{
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    padding: 10px;
-    transition: .3s;
-} 
-/* nav{grid-area: nav;} */
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-left: 0;
-}
-nav ul li{
-    margin: 2rem;
-}
-.main{
-    grid-area: main;
-    background-color: white;
-}
-.main h2 {
-    /* font-family: 'Luckyest Guy', cursive; */
-    color:midnightblue;
-    text-align: center;
-}
-.main p{
-    font-family: 'roboto', serif;
-    text-align: center;
-}
-.main_bienvenida p{
-    margin-top:  300px;
-}
-.cards{
+.cards-mine{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     gap: 20px;
 }
-.fade{
+.card-mine{
+    width:100%;
+    height: 300px;
+}
+.fade-mine{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* para tablet|desktop - mediaquery
+    flex-direction: row;
+    justify-content: space-around; */
     text-transform: uppercase;
     line-height: 40px;
 }
-.fade__content{
+.fade-mine__content{
     display: block;
     opacity: 0;
     animation: revealText 1s forwards;
 }
-.fade-second{animation-delay: .25s;}
-.fade-third{animation-delay: .5s;}
-.fade-fourth{animation-delay: .75s;}
+.fade-mine-second{animation-delay: .33s;}
+.fade-mine-third{animation-delay: .66s;}
 @keyframes revealText {
     from{
         transform: translateY(20px);
@@ -91,128 +48,53 @@ nav ul li{
     }
 }
 
-.serie__items{
-    display: flex;
-    justify-content: space-around;
-    padding-left: 0;
-}
-.serie__item:hover{
-    background-color: rgba(0,0,0,0);
-    border-radius: 0px;
-    padding: 0px;
-}
-.bios__ul-imgs{
-    display:flex;
-    justify-content: space-around;
-}
-.bios__ul-img:hover{
-    background-color: rgba(0,0,0,0);
-    border-radius: 0px;
-    padding: 0px;
-}
-img{
-    width:100%;
-    height: 300px;
-}
-/* .asideLeft{grid-area: asideL;}
-.asideRight{grid-area: asideR;}
-.banner{
-    display: flex;
-    flex-direction: row;
-    width:30%;
-} */
-/* form{
-    display:flex;
-    flex-direction:column;
-    align-items: flex-start;
-} */
+/* ver estilos del form */
 /* https://www.youtube.com/watch?v=SrC1EaIBdUI */
-form{
-    background-color: rgba(25, 25, 113,0.7);
-    border-radius: 3px;
-    color: white;
-    font-size: 0.8em;
-    padding: 20px;
-    margin: 0 auto;
-    width: 300px;
-    padding-left: 10px;
+.form-mine{
+    background-color: lightsteelblue;
+    border-radius: 7px;
 }
-input, textarea{
-    border: 0;
-    outline: none;
-    width: 280px;
-}
-.field{
+.field-mine{
     border: solid 1px gray;
     padding: 10px;
 }
-.field:focus{
+.field-mine:focus{
     border-color: midnightblue;
 }
 .center-content{
     text-align: center;
 }
-/* https://www.w3docs.com/tools/code-editor/8421 */
-.check-label {
-    display: block;
-    padding-left: 15px;
-    text-indent: -15px;
-  }
-.check {
-    width: 15px;
-    height: 15px;
-    padding: 0;
-    margin: 0;
-    vertical-align: bottom;
-    position: relative;
-    top: -1px;
-    margin-right: 10px;
-}
-.button{
-    display: inline-block;
-    color: midnightblue;
+/* efecto iluminacion del boton */
+.button-mine{
     text-decoration: none;
     padding: 10px 30px;
     border: 3px solid grey;
     border-radius: 10px;
 }
-.button:hover{
+.button-mine:hover{
     animation: pulsate 1s ease-in-out;
 }
 @keyframes pulsate {
     0%{
         box-shadow: 0 0 25px aqua,
-                    0 0 50px purple;
+                    0 0 30px purple;
     }
 }
+ /* /ver estilos del form */
 
-footer{
-    grid-area: footer;
-    align-items:center;
-    background-color: grey;
-    color:white;
-    bottom: 0;
-    /* padding: 10px; */
-}
-.footer{ 
-    display:flex;
-    justify-content: space-around;
-    list-style: none;
-    text-align: center;
-    padding-left: 0;
-}
-.footer__link{
+.footer__link-mine{
     display: inline-block;
     margin-block: 2px;
     text-decoration: none;
-    color: #fff;
+    color: grey;
     position: relative;
+    text-align: center;
 }
-.footer__link::after{
+.footer__link-mine::after{
     content: '';
     width: 100%;
     height: 1px;
-    background-color: #fff;
+    background-color: grey;
     border-radius: 4px;
     position: absolute;
     left: 0;
@@ -221,21 +103,32 @@ footer{
     transform-origin: left;
     transition: transform .25s ease;
 }
-.footer__link:hover::after{
+.footer__link-mine:hover::after{
     transform: scale(1);
 }
 
-@media (max-width:800px){
-    body {
-        grid-template-rows: 150px 1fr auto;
+@media (min-width:640px) {
+    .fade-mine{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #carouselExampleIndicators{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .itemDesc-mine{
+        margin-left: 150px;
+        margin-right: 150px;
     }
 }
 
-@media (max-width:480px){
-    body {
-        grid-template-rows: 24rem 1fr auto;
+@media (min-width:1200px) {
+    #carouselExampleIndicators{
+        margin-left: 250px;
+        margin-right: 250px;
     }
-    nav ul {
-        flex-direction: column;
+    .itemDesc-mine{
+        margin-left: 250px;
+        margin-right: 250px;
     }
 }
