@@ -1,0 +1,25 @@
+// esto nose si va asi o trendria que ir en cada componente su mediaquerie
+/* MediaQueries propios */
+@media (min-width:768px) {
+    .fade-mine{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .cards-mine{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+
+    #carouselExampleIndicators,#carouselExampleIndicators1,#carouselExampleIndicators2,#carouselExampleIndicators3{
+        margin-left: $margin-tablet;
+        margin-right: $margin-tablet;
+    }
+    .serie{
+        border: 10px solid $complementary-color;
+    }
+}
+@media (min-width:1200px) {
+    #carouselExampleIndicators,#carouselExampleIndicators1,#carouselExampleIndicators2,#carouselExampleIndicators3{
+        margin-left: $margin-desktop;
+        margin-right: $margin-desktop;
+    }
+}

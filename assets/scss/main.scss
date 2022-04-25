@@ -1,0 +1,27 @@
+// Inicializacion
+/*Inicializacion para normalizacion del navegador*/
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+}
+
+// Variables
+@import "./utilities/variables";
+
+// Header
+@import "./components/header";
+
+// a definir
+@import "./components/varios";
+
+// Contacto
+@import "./components/contacto";
+
+// Footer
+@import "./components/footer";
+
+// Media queries -- nose si va mejor asi o que cada componente lleve su MediaQuerie correspondiente
+@import "./components/mediaqueries";
