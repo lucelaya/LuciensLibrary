@@ -4,3 +4,7 @@
 # Ignora la carpeta node_modules y los package*.json
 node_modules
 package*.json
+
+# Ignora archivos viejos
+img_originales
+_style_pre-sass.css
