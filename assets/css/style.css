@@ -47,9 +47,19 @@ Header {
     opacity: 1;
     transform: none; } }
 
-/* fondo del articulo-Serie */
+/* Usando un mapa */
 .serie {
   background-color: rgba(134, 183, 184, 0.5);
+  border-radius: 5px;
+  margin-bottom: 10px; }
+
+.guionista {
+  background-color: rgba(70, 112, 167, 0.5);
+  border-radius: 5px;
+  margin-bottom: 10px; }
+
+.dibujante {
+  background-color: rgba(201, 113, 31, 0.5);
   border-radius: 5px;
   margin-bottom: 10px; }
 
@@ -68,18 +78,24 @@ Header {
   text-align: center; }
 
 /* efecto iluminacion del boton */
-.button-mine {
+.button-mine, .button-mine-enviar, .button-mine-borrar {
   text-decoration: none;
   padding: 10px 30px;
   border: 3px solid grey;
   border-radius: 10px; }
-
-.button-mine:hover {
-  animation: pulsate 1s ease-in-out; }
+  .button-mine:hover, .button-mine-enviar:hover, .button-mine-borrar:hover {
+    animation: pulsate 1s ease-in-out; }
 
 @keyframes pulsate {
   0% {
     box-shadow: 0 0 25px aqua, 0 0 30px purple; } }
+
+/* uso extend */
+.button-mine-enviar {
+  background-color: rgba(201, 113, 31, 0.5); }
+
+.button-mine-borrar {
+  background-color: rgba(70, 112, 167, 0.5); }
 
 .footer__link-mine {
   display: inline-block;
@@ -105,18 +121,25 @@ Header {
 
 /* MediaQueries propios */
 @media (min-width: 768px) {
+  #carouselExampleIndicators, #carouselExampleIndicators1, #carouselExampleIndicators2, #carouselExampleIndicators3 {
+    /* usando un mixin */
+    margin-left: 150px;
+    margin-right: 150px; }
   .fade-mine {
     flex-direction: row;
     justify-content: space-around; }
   .cards-mine {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-  #carouselExampleIndicators, #carouselExampleIndicators1, #carouselExampleIndicators2, #carouselExampleIndicators3 {
-    margin-left: 150px;
-    margin-right: 150px; }
+  /* usando get-map */
   .serie {
-    border: 10px solid rgba(134, 183, 184, 0.5); } }
+    border: 5px solid rgba(134, 183, 184, 0.5); }
+  .guionista {
+    border: 5px solid rgba(70, 112, 167, 0.5); }
+  .dibujante {
+    border: 5px solid rgba(201, 113, 31, 0.5); } }
 
 @media (min-width: 1200px) {
   #carouselExampleIndicators, #carouselExampleIndicators1, #carouselExampleIndicators2, #carouselExampleIndicators3 {
+    /* usando un mixin */
     margin-left: 250px;
     margin-right: 250px; } }

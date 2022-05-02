@@ -34,9 +34,29 @@
     }
 }
 
-/* fondo del articulo-Serie */
-.serie{
-    background-color: $complementary-color;
-    border-radius: 5px;
-    margin-bottom: 10px;
+// /* fondo del articulo-Serie */
+// .serie{
+//     background-color: $complementary-color;
+//     border-radius: 5px;
+//     margin-bottom: 10px;
+// }
+// /* fondo del articulo-Duionista */
+// .guionista{
+//     background-color: $complementary-color;
+//     border-radius: 5px;
+//     margin-bottom: 10px;
+// }
+// /* fondo del articulo-Dibujante */
+// .dibujante{
+//     background-color: $complementary-color;
+//     border-radius: 5px;
+//     margin-bottom: 10px;
+// }
+/* Usando un mapa */
+@each $page, $color in $complementary-colors{
+    .#{$page} {
+        background-color: $color;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
 }

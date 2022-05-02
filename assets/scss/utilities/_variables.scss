@@ -1,3 +1,16 @@
 $complementary-color: rgba(134, 183, 184,.5);
 $margin-tablet: 150px;
 $margin-desktop: 250px;
+
+// generar mapa con colores de cada seccion se usa en _varios
+$complementary-colors:(
+    serie: rgba(134, 183, 184, 0.5),
+    guionista: rgba(70, 112, 167, 0.5),
+    dibujante: rgba(201, 113, 31, 0.5)
+);
+// generar mixin de algo - margenes carouseles se usa en _mediaqueries
+@mixin carousel-margen($margen){
+    margin-left: $margen;
+    margin-right: $margen;
+}
+// extender una clase - use la clase .button-mine en _contacto
