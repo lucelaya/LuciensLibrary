@@ -1,5 +1,5 @@
-/* ver estilos del form */
-/* https://www.youtube.com/watch?v=SrC1EaIBdUI */
+//* ver estilos del form */
+//* https://www.youtube.com/watch?v=SrC1EaIBdUI */
 .form-mine{
     background-color: $complementary-color;
     border-radius: 7px;
@@ -14,8 +14,7 @@
 .center-content{
     text-align: center;
 }
-
-/* efecto iluminacion del boton */
+//* efecto iluminacion del boton */
 .button-mine{
     text-decoration: none;
     padding: 10px 30px;
@@ -31,7 +30,7 @@
                     0 0 30px purple;
     }
 }
-/* uso extend */
+//* uso extend */
 .button-mine-enviar{
     @extend .button-mine;
     background-color: map-get($complementary-colors, dibujante);
@@ -39,4 +38,21 @@
 .button-mine-borrar{
     @extend .button-mine;
     background-color: map-get($complementary-colors, guionista);
+}
+// hover & on click - respetar mi color
+.btn-primary:hover {
+    background-color: map-get($complementary-colors, dibujante);
+    border-color: map-get($complementary-colors, dibujante);
+}
+.btn-primary:focus {
+    background-color: map-get($complementary-colors, dibujante);
+    border-color: map-get($complementary-colors, dibujante);
+}
+.btn-secondary:hover {
+    background-color: map-get($complementary-colors, guionista);
+    border-color: map-get($complementary-colors, guionista);
+}
+.btn-secondary:focus {
+    background-color: map-get($complementary-colors, guionista);
+    border-color: map-get($complementary-colors, guionista);
 }

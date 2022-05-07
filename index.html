@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Lucien's Library</title>
     <!-- SEO -->
-    <meta name="Description" content="Lucien’s Library. Encontra la mayor variedad de Comics, Manga, Novelas Gráficas, Ciudad Autónoma de Buenos Aires, +54 11 99999999, Pedidos@LuciensLibrary.com">
-    <meta name="Keywords" content="Revisteria, Comiqueria, Comic, Manga, Cuentos, Novela, Grafica, Biografias, Dibujantes, Ilustradores, Coloristas, Escritores, Guionistas, Envios">
+    <meta name="Description"
+        content="Lucien’s Library. Encontra la mayor variedad de Comics, Manga, Novelas Gráficas, Ciudad Autónoma de Buenos Aires, +54 11 99999999, Pedidos@LuciensLibrary.com">
+    <meta name="Keywords"
+        content="Revisteria, Comiqueria, Comic, Manga, Cuentos, Novela, Grafica, Biografias, Dibujantes, Ilustradores, Coloristas, Escritores, Guionistas, Envios">
 </head>
 
 <body class="d-flex flex-column h-100 bg-light">
@@ -22,7 +24,7 @@
         <!-- nav -->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
-                <h1><a class="navbar-brand" href="./index.html">Lucien's Library</a></h1>
+                <h1 class="h1-index"><a class="navbar-brand" href="./index.html">Lucien's Library</a></h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -52,17 +54,161 @@
         <!-- Dejo el primer subtitulo del index con formato de H1 para que quede coherente con el resto de los titulos de los mains del sitio -->
         <h2 class="h1 mt-3">Bienvenido a Lucien's Library</h2>
         <p class="lead">En este sitio vas a encontrar las mejores series del noveno arte.</p>
-        <!-- Metemos una animacion sobre un texto -->
-        <h2 class="fade-mine">
-            <span class="fade-mine__content">Guionistas</span>
-            <span class="fade-mine__content fade-mine-second">Series</span>
-            <span class="fade-mine__content fade-mine-third">Dibujantes</span>
-        </h2>
         <!-- Aca estaria bueno hacer un slider de productos o contenido -->
         <div class="cards-mine">
-            <div><a href="./Pages/Guionistas.html"><img class="card-mine" src="./assets/img/Gaiman01.jpeg" alt="Guionistas"></a></div>
-            <div><a href="./Pages/Series.html"><img class="card-mine" src="./assets/img/Sandman001.jpg" alt="Series"></a></div>
-            <div><a href="./Pages/Dibujantes.html"><img class="card-mine" src="./assets/img/dave01.jpeg" alt="Dibujantes"></a></div>
+            <!-- GUIONISTAS -->
+            <div class="card-mine guionista">
+                <!-- Animacion sobre un texto -->
+                <h2 class="fade-mine"><a href="./Pages/Guionistas.html" class="fade-mine__content index__link-mine text-decoration-none">Guionistas</a></h2>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="./Pages/Guionistas.html"><img src="./assets/img/Gaiman01.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Neil Gaiman</h5>
+                                <p>Neil Richard Gaiman, autor de ficción, novelas, cómics, n...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Guionistas.html"><img src="./assets/img/Ellis01.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Warren Ellis</h5>
+                                <p>Es guionista de cómics, pero también ha escrito novelas, ...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Guionistas.html"><img src="./assets/img/Vaughan01.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Brian K. Vaughan</h5>
+                                <p>Es un guionista de cómic estadounidense conocido por sus ...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Guionistas.html"><img src="./assets/img/Azzarello02.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Brian Azzarello</h5>
+                                <p>Es un escritor estadounidense de Cómics afamado por sus t...</p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- SERIES -->
+            <div class="card-mine serie">
+                <!-- Animacion sobre un texto -->
+                <h2 class="fade-mine"><a href="./Pages/Series.html" class="fade-mine__content fade-mine-second index__link-mine text-decoration-none">Series</a></h2>
+                <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="./Pages/Series.html"><img src="./assets/img/Sandman001-index.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>The Sandman</h5>
+                                <p>Es la colección de comics más unánimemente aclamada por c...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Series.html"><img src="./assets/img/Balas001-index.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>100 Balas</h5>
+                                <p>Serie negra e intriga. 100 Bullets (en inglés) nos cuenta...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Series.html"><img src="./assets/img/YTLM01-index.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Y: El último hombre</h5>
+                                <p>La serie plantea que algo, presumiblemente una plaga de o...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Series.html"><img src="./assets/img/Trans01-index.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Transmetropolitan</h5>
+                                <p>Estamos en una gran metropolis de un indeterminado futuro...</p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- DIBUJANTES -->
+            <div class="card-mine dibujante">
+                <!-- Animacion sobre un texto -->
+                <h2 class="fade-mine"><a href="./Pages/Dibujantes.html" class="fade-mine__content fade-mine-third index__link-mine text-decoration-none">Dibujantes</a></h2>
+                <div id="carouselExampleFade3" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="./Pages/Dibujantes.html"><img src="./assets/img/dave01.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Dave McKean</h5>
+                                <p>Nacido en Maidenhead, Inglaterra, el 10 de noviembre de 1...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Dibujantes.html"><img src="./assets/img/Risso01.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Eduardo Risso</h5>
+                                <p>Es un dibujante e historietista argentino. Es uno de los ...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Dibujantes.html"><img src="./assets/img/Guerra01.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Pia Guerra</h5>
+                                <p>Pia Jasmin Guerra, es una dibujante de cómics canadiense ...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./Pages/Dibujantes.html"><img src="./assets/img/Robertson01.jpeg"
+                                    class="d-block w-100" alt="Guionistas"></a>
+                            <div class="carousel-caption d-none d-sm-block contrast-text">
+                                <h5>Darick W. Robertson</h5>
+                                <p>Es un artista estadounidense mejor conocido por su trabaj...</p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- /main -->

@@ -1,21 +1,37 @@
-/* grid en index */
+// Quitar soporte a ucrania LOL -- 000webhost --
+.disclaimer {display: none;}
+//* h1 del index */ emparejamiento de formato
+.h1-index{
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+//* grid en index */
 .cards-mine{
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    .card-mine{
-        width:100%;
-        height: 300px;
-    }
 }
-
-/* efecto aparecer */
+.card-mine{
+    width:100%;
+    padding-bottom: 10px;
+}
+.contrast-text{
+    background-color:rgba($color: #000000, $alpha: .5);
+    border-radius: 5px;
+    padding-top: 0px; 
+    padding-bottom: 0px;
+}
+//* efecto aparecer */
 .fade-mine{
     display: flex;
     flex-direction: column;
     align-items: center;
+    // line-height: 40px;
+    margin-bottom: 4px;
+    &>a{
     text-transform: uppercase;
-    line-height: 40px;
+    }
 }
 .fade-mine__content{
     display: block;
@@ -33,7 +49,34 @@
         transform: none;
     }
 }
-
+// Subrrayado.
+.index__link-mine{
+    display: inline-block;
+    margin-block: 2px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    text-align: center;
+    &:hover{
+        color: black;
+    }
+    &::after{
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .25s ease;
+    }
+    &:hover::after{
+        transform: scale(1);
+    }
+}
 // /* fondo del articulo-Serie */
 // .serie{
 //     background-color: $complementary-color;
@@ -52,7 +95,7 @@
 //     border-radius: 5px;
 //     margin-bottom: 10px;
 // }
-/* Usando un mapa */
+//* Usando un mapa */
 @each $page, $color in $complementary-colors{
     .#{$page} {
         background-color: $color;
