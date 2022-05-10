@@ -12,6 +12,13 @@ Header {
   background-position: center;
   min-height: 200px; }
 
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  z-index: 3; }
+
 .disclaimer {
   display: none; }
 
@@ -100,6 +107,11 @@ Header {
   border-radius: 5px;
   margin-bottom: 10px; }
 
+.grid-mine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px; }
+
 .form-mine {
   background-color: rgba(134, 183, 184, 0.5);
   border-radius: 7px; }
@@ -169,9 +181,6 @@ Header {
     transform: scale(1); }
 
 @media (min-width: 768px) {
-  #carouselExampleIndicators, #carouselExampleIndicators1, #carouselExampleIndicators2, #carouselExampleIndicators3 {
-    margin-left: 150px;
-    margin-right: 150px; }
   .fade-mine {
     flex-direction: row;
     justify-content: space-around; }
@@ -183,8 +192,3 @@ Header {
     border: 2px solid rgba(70, 112, 167, 0.5); }
   .dibujante {
     border: 2px solid rgba(201, 113, 31, 0.5); } }
-
-@media (min-width: 1200px) {
-  #carouselExampleIndicators, #carouselExampleIndicators1, #carouselExampleIndicators2, #carouselExampleIndicators3 {
-    margin-left: 250px;
-    margin-right: 250px; } }

@@ -4,3 +4,11 @@ Header{
     background-position: center;
     min-height: 200px;
 }
+// sticky navbar
+.sticky-navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    z-index: 3;
+}

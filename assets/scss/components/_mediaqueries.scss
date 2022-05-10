@@ -1,12 +1,12 @@
 // esto nose si va asi o trendria que ir en cada componente su mediaquerie
 //* MediaQueries propios */
 @media (min-width:768px) {
-    #carouselExampleIndicators,#carouselExampleIndicators1,#carouselExampleIndicators2,#carouselExampleIndicators3{
-        // margin-left: $margin-tablet;
-        // margin-right: $margin-tablet;
-        //* usando un mixin */
-        @include carousel-margen($margin-tablet);
-    }
+    // #carouselExampleIndicators,#carouselExampleIndicators1,#carouselExampleIndicators2,#carouselExampleIndicators3{
+    //     // margin-left: $margin-tablet;
+    //     // margin-right: $margin-tablet;
+    //     //* usando un mixin */
+    //     @include carousel-margen($margin-tablet);
+    // }
     .fade-mine{
         flex-direction: row;
         justify-content: space-around;
@@ -25,11 +25,11 @@
         border: 2px solid map-get($complementary-colors, dibujante);
     }
 }
-@media (min-width:1200px) {
-    #carouselExampleIndicators,#carouselExampleIndicators1,#carouselExampleIndicators2,#carouselExampleIndicators3{
-        // margin-left: $margin-desktop;
-        // margin-right: $margin-desktop;
-        //* usando un mixin */
-        @include carousel-margen($margin-desktop);
-    }
-}
+// @media (min-width:1200px) {
+//     #carouselExampleIndicators,#carouselExampleIndicators1,#carouselExampleIndicators2,#carouselExampleIndicators3{
+//         // margin-left: $margin-desktop;
+//         // margin-right: $margin-desktop;
+//         //* usando un mixin */
+//         @include carousel-margen($margin-desktop);
+//     }
+// }
