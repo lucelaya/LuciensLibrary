@@ -24,6 +24,9 @@
     .dibujante{
         border: 2px solid map-get($complementary-colors, dibujante);
     }
+    .grid-mine{
+        grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+    }
 }
 // @media (min-width:1200px) {
 //     #carouselExampleIndicators,#carouselExampleIndicators1,#carouselExampleIndicators2,#carouselExampleIndicators3{

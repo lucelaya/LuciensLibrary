@@ -94,23 +94,27 @@ Header {
 
 .serie {
   background-color: rgba(134, 183, 184, 0.5);
-  border-radius: 5px;
-  margin-bottom: 10px; }
+  border-radius: 5px; }
 
 .guionista {
   background-color: rgba(70, 112, 167, 0.5);
-  border-radius: 5px;
-  margin-bottom: 10px; }
+  border-radius: 5px; }
 
 .dibujante {
   background-color: rgba(201, 113, 31, 0.5);
-  border-radius: 5px;
+  border-radius: 5px; }
+
+.container {
   margin-bottom: 10px; }
 
 .grid-mine {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 10px; }
+
+.text-justify-mine {
+  text-align: justify;
+  text-justify: inter-word; }
 
 .form-mine {
   background-color: rgba(134, 183, 184, 0.5);
@@ -142,18 +146,12 @@ Header {
 .button-mine-borrar {
   background-color: rgba(70, 112, 167, 0.5); }
 
-.btn-primary:hover {
-  background-color: rgba(201, 113, 31, 0.5);
-  border-color: rgba(201, 113, 31, 0.5); }
-
+.btn-primary:hover,
 .btn-primary:focus {
   background-color: rgba(201, 113, 31, 0.5);
   border-color: rgba(201, 113, 31, 0.5); }
 
-.btn-secondary:hover {
-  background-color: rgba(70, 112, 167, 0.5);
-  border-color: rgba(70, 112, 167, 0.5); }
-
+.btn-secondary:hover,
 .btn-secondary:focus {
   background-color: rgba(70, 112, 167, 0.5);
   border-color: rgba(70, 112, 167, 0.5); }
@@ -191,4 +189,6 @@ Header {
   .guionista {
     border: 2px solid rgba(70, 112, 167, 0.5); }
   .dibujante {
-    border: 2px solid rgba(201, 113, 31, 0.5); } }
+    border: 2px solid rgba(201, 113, 31, 0.5); }
+  .grid-mine {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); } }

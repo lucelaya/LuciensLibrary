@@ -40,18 +40,12 @@
     background-color: map-get($complementary-colors, guionista);
 }
 // hover & on click - respetar mi color
-.btn-primary:hover {
-    background-color: map-get($complementary-colors, dibujante);
-    border-color: map-get($complementary-colors, dibujante);
-}
+.btn-primary:hover ,
 .btn-primary:focus {
     background-color: map-get($complementary-colors, dibujante);
     border-color: map-get($complementary-colors, dibujante);
 }
-.btn-secondary:hover {
-    background-color: map-get($complementary-colors, guionista);
-    border-color: map-get($complementary-colors, guionista);
-}
+.btn-secondary:hover ,
 .btn-secondary:focus {
     background-color: map-get($complementary-colors, guionista);
     border-color: map-get($complementary-colors, guionista);
